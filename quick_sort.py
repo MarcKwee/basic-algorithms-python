@@ -4,12 +4,11 @@ def quick_sort(array):
     pivot = array[0]
 
     less = []
+    more = []
     for i in array[1:]:
         if (i <= pivot):
             less.append(i)
-    more = []
-    for i in array[1:]:
-        if (i > pivot):
+        else:
             more.append(i)
 
     return quick_sort(less) + [pivot] + quick_sort(more)
